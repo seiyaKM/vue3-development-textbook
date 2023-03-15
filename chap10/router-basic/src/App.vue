@@ -50,7 +50,11 @@ main {
 }
 
 #breadcrumbs ul .current {
-  content: '>';
+  color: red;
+}
+
+#breadcrumbs ul li:before {
+  content: '> ';
 }
 
 #breadcrumbs ul li:first-child::before {

@@ -7,6 +7,20 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'AppTop',
     component: AppTop
+  },
+  {
+    path: '/member/member-list',
+    name: 'MemberList',
+    component: () => import('@/views/MemberList.vue')
+  },
+  {
+    path: '/member/detail/:id',
+    name: 'MemberDetail',
+    component: () => import('@/views/MemberDetail.vue'),
+    props: (routes) => {
+      const id = Number(routes.params.id)
+      return { id }
+    }
   }
 ]
 

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+</script>
+
 <template>
   <h1>TOP</h1>
   <nav id="breadcrumbs">
@@ -6,6 +10,8 @@
     </ul>
   </nav>
   <section>
-    <p>Click here for Member Management.</p>
+    <p>
+      <RouterLink :to="{ name: 'MemberList' }"> Click here for Member Management. </RouterLink>
+    </p>
   </section>
 </template>
