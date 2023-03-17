@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Member } from '@/types/Member'
-// import { RouterLink } from 'vue-router'
 import { inject } from 'vue'
 
 const members = inject('members') as Map<number, Member>
@@ -18,6 +17,9 @@ const members = inject('members') as Map<number, Member>
   </nav>
   <section>
     <h2>MemberList</h2>
+    <p>
+      <RouterLink :to="{ name: 'MemberAdd' }"> Click here for New Member Registration. </RouterLink>
+    </p>
     <section>
       <ul>
         <li v-for="[id, member] in members" :key="id">
